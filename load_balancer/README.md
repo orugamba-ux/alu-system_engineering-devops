@@ -1,4 +1,4 @@
-cat > README.md << 'EOF'
+
 # Load Balancer and Custom HTTP Header
 
 ## 📖 Overview
