@@ -6,6 +6,8 @@ Scripts and config for making an ssh key and connecting to my server with it.
 - `1-create_ssh_key_pair` - makes a 4096 bit rsa key pair called `school`
 - `2-ssh_config` - client config so ssh uses that key and never asks for a
   password
+- `100-puppet_ssh_config.pp` - the same two settings, but done with puppet
+  instead of by hand
 
 Make the key first, then move it where ssh looks for it:
 
@@ -33,3 +35,9 @@ should print `identityfile ~/.ssh/school` and `passwordauthentication no`.
 
 The school public key is also in `~/.ssh/authorized_keys` on the server so the
 graders can log in as `ubuntu` too.
+
+Puppet can set the same two lines in `/etc/ssh/ssh_config` for you:
+
+```
+$ sudo puppet apply 100-puppet_ssh_config.pp
+```
