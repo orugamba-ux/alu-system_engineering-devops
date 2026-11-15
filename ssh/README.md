@@ -30,3 +30,6 @@ ubuntu@6993-web-01:~$
 
 You can check the config is being picked up with `ssh -G <server-ip>`, it
 should print `identityfile ~/.ssh/school` and `passwordauthentication no`.
+
+The school public key is also in `~/.ssh/authorized_keys` on the server so the
+graders can log in as `ubuntu` too.
