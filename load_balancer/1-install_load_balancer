@@ -45,4 +45,8 @@ haproxy -c -f /etc/haproxy/haproxy.cfg
 # Restart HAProxy
 service haproxy restart
 
+for i in 1 2; do
+    curl -Is localhost | grep -i x-served-by
+done
+
 echo "HAProxy installed and configured successfully with round-robin load balancing."
