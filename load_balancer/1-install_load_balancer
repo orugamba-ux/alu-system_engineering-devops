@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Configures an Ubuntu machine as the HAProxy load balancer (lb-01)
 hostnamectl set-hostname 6993-lb-01
 # Installs and configures HAProxy load balancer with roundrobin to web-01 and web-02
 
