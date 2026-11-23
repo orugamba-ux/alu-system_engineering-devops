@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+hostnamectl set-hostname 6993-lb-01
 # Installs and configures HAProxy load balancer with roundrobin to web-01 and web-02
 
 # Update and install HAProxy
@@ -33,8 +34,8 @@ frontend http_front
 
 backend web_servers
     balance roundrobin
-    server web-01 3.80.194.42:80
-    server web-02 52.70.163.162:80
+    server web-01 18.171.164.6
+    server web-02 3.8.115.87
 EOC
 
 # Validate configuration
